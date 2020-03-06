@@ -72,7 +72,7 @@ const HookComponent = props => {
                 <label>Confirm</label>
                 <input type="password" style ={{float:"right", width: "200px"}} name="confirmPassword" onChange={onChangeHandler}/>
                 <br/>        
-                {formState.password == formState.confirmPassword && formState.password.length == 0 ? <small>Password must match</small> : <small style={{color: "red"}}>Password must match</small>}
+                {formState.password == formState.confirmPassword ? <small>Password must match</small> : <small style={{color: "red"}}>Password must match</small>}
                 </fieldset>
                 <br/>   
 
