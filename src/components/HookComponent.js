@@ -40,7 +40,7 @@ const HookComponent = props => {
                 <label>First Name</label>
                 <input type="text" style ={{float:"right", width: "200px"}} name="firstName" onChange={onChangeHandler} />
                 <br/>
-                {formState.firstName.length < 2 ? <small style={{color: "red"}}>First name must be at least 2 characters</small> : <small>First name must be at least 2 characters</small>}
+                {formState.firstName.length < 2 && formState.firstName.length != 0 ? <small style={{color: "red"}}>First name must be at least 2 characters</small> : <small>First name must be at least 2 characters</small>}
                 </fieldset>
                 <br/>     
                 
@@ -48,7 +48,7 @@ const HookComponent = props => {
                 <label>Last Name</label>
                 <input type="text" style ={{float:"right", width: "200px"}} name="lastName" onChange={onChangeHandler}/>
                 <br/>        
-                {formState.lastName.length < 2 ? <small style={{color: "red"}}>Last name must be at least 2 characters</small> : <small>Last name must be at least 2 characters</small>}
+                {formState.lastName.length < 2 && formState.lastName.length != 0 ? <small style={{color: "red"}}>Last name must be at least 2 characters</small> : <small>Last name must be at least 2 characters</small>}
                 </fieldset>   
                 <br/>        
 
@@ -56,7 +56,7 @@ const HookComponent = props => {
                 <label>Email</label>
                 <input type="email" style ={{float:"right", width: "200px"}} name="email" onChange={onChangeHandler}/>
                 <br/>        
-                {formState.email.length < 2 ? <small style={{color: "red"}}>Email must be at least 2 characters</small> : <small>Email must be at least 2 characters</small>}
+                {formState.email.length < 2 && formState.email.length != 0 ? <small style={{color: "red"}}>Email must be at least 2 characters</small> : <small>Email must be at least 2 characters</small>}
                 </fieldset>
                 <br/>      
 
@@ -64,7 +64,7 @@ const HookComponent = props => {
                 <label>Password</label>
                 <input type="password" style ={{float:"right", width: "200px"}} name="password" onChange={onChangeHandler}/>
                 <br/>        
-                {formState.password.length < 8 ? <small style={{color: "red"}}>Password must be at least 8 characters</small> : <small>Password must be at least 8 characters</small>}
+                {formState.password.length < 8 && formState.password.length != 0 ? <small style={{color: "red"}}>Password must be at least 8 characters</small> : <small>Password must be at least 8 characters</small>}
                 </fieldset>  
                 <br/>        
 
@@ -72,7 +72,7 @@ const HookComponent = props => {
                 <label>Confirm</label>
                 <input type="password" style ={{float:"right", width: "200px"}} name="confirmPassword" onChange={onChangeHandler}/>
                 <br/>        
-                {formState.password == formState.confirmPassword ? <small>Password must match</small> : <small style={{color: "red"}}>Password must match</small>}
+                {formState.password == formState.confirmPassword && formState.password.length == 0 ? <small>Password must match</small> : <small style={{color: "red"}}>Password must match</small>}
                 </fieldset>
                 <br/>   
 
